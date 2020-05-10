@@ -1,2 +1,2 @@
 # problem-solving
-My solutions for Codeforces problems in C++
+My solutions for Codeforces in C++
