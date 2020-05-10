@@ -1,0 +1,27 @@
+Link: https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/H
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double a,b,divs;
+    cin>> a>>b;
+    divs = a/b ;
+    
+    cout<< "floor "<<a<< " / "<<b<<" = " << int(divs)<< endl ;
+    
+    if (divs == int(divs))
+        cout<< "ceil "<<a<< " / "<<b<<" = " << int(divs)<< endl ;
+    else
+        cout<< "ceil "<<a<< " / "<<b<<" = " << int(divs) +1<< endl ;
+        
+    double dif = divs - int(divs)   ;
+    
+    if (dif < 0.5)
+        cout<< "round "<<a<< " / "<<b<<" = " << int(divs)<< endl ;
+    else
+        cout<< "round "<<a<< " / "<<b<<" = " << int(divs) +1<< endl ;
+    
+    return 0;
+}
