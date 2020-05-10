@@ -1,0 +1,15 @@
+Link: https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/E
+
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    const long double PI = 3.141592653;
+    long double R;
+    cin>> R;
+    cout << setprecision(9) << PI*pow(R,2)<< endl;
+    return 0;
+}
