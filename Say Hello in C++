@@ -1,0 +1,13 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/A
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    string Name;
+    cin>> Name;
+    cout<<"Hello, "<<Name<<endl;
+    
+    return 0;
+}
