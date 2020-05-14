@@ -1,0 +1,28 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/E
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    int max_num;
+    cin>>max_num; 
+        
+    while(n>1)
+    { 
+        int num;
+        cin>>num;
+        
+        if (max_num < num)
+           max_num = num;
+
+        
+        n--;
+    }
+    cout<<max_num;  
+    
+    return 0;
+}
