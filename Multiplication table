@@ -1,0 +1,21 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/F
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num;
+    cin>>num;
+    
+    int x= 1;
+    while(x<=12)
+    {
+        cout<<num<<" * "<<x<< " = "<<num*x<<endl;
+        
+        
+        x++;
+    } 
+    
+    return 0;
+}
