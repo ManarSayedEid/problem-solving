@@ -1,0 +1,40 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/C
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int N;
+    cin>>N;
+    
+    int sum_even = 0, sum_odd=0;
+    int sum_pos = 0, sum_neg=0;
+    
+    while(N>0)
+    {
+        int num;
+        cin>>num;
+        
+        if (num>0)
+           sum_pos +=1;
+        else if (num<0)
+           sum_neg +=1;
+           
+           
+        if (num%2== 0)
+           sum_even +=1;
+        else
+           sum_odd +=1;
+        
+        
+        N--;
+    }
+    
+    cout<<"Even: "<<sum_even<<endl;
+    cout<<"Odd: "<<sum_odd<<endl;
+    cout<<"Positive: "<<sum_pos<<endl;
+    cout<<"Negative: "<<sum_neg<<endl;
+  
+    return 0;
+}
