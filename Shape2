@@ -1,0 +1,30 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/T
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string space = " ";
+    int N,row=1;
+    char star='*';
+
+    cin>>N;
+
+    while (N>0)
+    {
+      for (int i=1; N>i ; i++)
+      {
+        cout<<space;
+      }
+      for (int j=0; j<row ;j++)
+      {
+        cout<<star;
+      }
+    row +=2;
+    cout<<endl;
+    N--;
+    }
+    
+    return 0;
+}
