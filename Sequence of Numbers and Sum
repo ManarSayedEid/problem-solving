@@ -1,0 +1,35 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/R
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a,b;
+
+    while ( cin>> a>>b)
+     {
+        if (a<=0 || b<=0)
+           break;
+        else {
+          int mini = a, maxi=b;
+
+          if (a>b)
+            mini = b, maxi = a;
+
+          cout<<mini<<" ";
+
+          int sum = mini;
+
+          while (mini<maxi)
+        {
+           mini +=1;
+           sum +=mini;
+           cout<<mini<<" " ;
+        }
+       cout<<"sum ="<<sum<<endl;
+            }
+    }
+    
+    return 0;
+}
