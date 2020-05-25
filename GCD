@@ -1,0 +1,42 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/L
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+
+    int mini =a, maxi=b;
+    if (b<mini){
+      mini=b;
+      maxi=a;
+    }
+
+
+    int lgd;
+    for (int i=1; i<=mini ; i++)
+    {
+        if (mini%i ==0)
+           lgd= i;
+    }
+
+
+    if (maxi%lgd == 0)
+       cout<<lgd;
+    else
+    {
+        for(int j=1; ;)
+        {
+            lgd -= j;;
+            if (mini%lgd==0 && maxi%lgd==0)
+                {
+              cout<<lgd;
+              break;
+                }
+        }
+    }
+    
+    return 0;
+}
