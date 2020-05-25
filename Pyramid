@@ -1,0 +1,24 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/O
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int N;
+    cin>>N;
+    
+    string star = "*";
+    int row=1;
+    
+    while (N--)
+    {
+    for (int i=1 ; i<=row ;i++ )
+         cout<<star;
+         
+    cout<<endl;
+    row++;
+    }
+    
+    return 0;
+}
