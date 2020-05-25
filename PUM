@@ -1,0 +1,24 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/V
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n,x=1;
+    cin>>n;
+    
+    while(n--)
+    {
+        
+        for (int i=x; i<= x+2; i++)
+        {
+            cout<<i<<" ";
+        }
+        cout<<"PUM"<<endl;
+        x +=4;
+    }
+  
+    
+    return 0;
+}
