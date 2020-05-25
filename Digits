@@ -1,0 +1,28 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/Q
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int T,num;
+    cin>>T;
+
+    while (T--)
+    {
+        cin>>num;
+        if (num == 0)
+            cout<<0<<endl;
+        else{
+          while (num>0)
+          {
+            int last_digit = num%10;
+            num /=10;
+            cout<< last_digit<<" ";
+          }
+        cout<<endl;
+        }
+    }
+    
+    return 0;
+}
