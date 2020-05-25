@@ -1,0 +1,37 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/S
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  
+  int T,x,y;
+
+    cin>>T;
+    while(T--)
+    {
+    int sum =0;
+    cin>>x>>y;
+
+    int mini =x;
+    int maxi =y;
+    if(mini>y)
+        {
+        mini =y;
+        maxi =x;
+        }
+
+    if (x==y)
+        cout<<0<<endl;
+    else {
+            mini++;
+      for ( ; mini<maxi ; mini++)
+        if (mini%2 ==1)
+           sum +=mini;
+
+    cout<<sum<<endl;
+         }
+    }
+    return 0;
+}
