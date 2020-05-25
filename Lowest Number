@@ -1,0 +1,30 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/E
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  
+int n,position=1;
+cin>>n;
+
+
+double A[n];
+
+for(int i=0; i<n; i++)
+    cin>>A[i];
+
+int minimum=A[0];
+
+for (int i=1; i<n ; i++)
+{
+    if (A[i]< minimum ){
+        minimum=A[i];
+        position=i+1;
+    }
+}
+cout<<minimum<<" "<<position;
+    
+    return 0;
+}
