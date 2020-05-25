@@ -1,0 +1,23 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/N
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  char ch;
+  int N,num;
+  cin>>ch>>N;
+  
+  while (N>0)
+  {
+      cin>>num;
+      for (int i=1; i<=num ; i++)
+         cout<<ch;
+         
+   cout<<endl;
+   N--; 
+  }
+    
+    return 0;
+}
