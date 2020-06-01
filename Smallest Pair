@@ -1,0 +1,32 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/I
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    
+int T,N,smallest;
+cin>>T;
+
+while(T--){
+        cin>>N;
+
+ int a[N];
+ for (int i=1; i<=N; i++)
+    cin>>a[i];
+
+
+ smallest= a[1]+a[2]+ 2-1;
+
+ for (int i=1; i<=N; i++){
+    for (int j=i+1; j<=N; j++){
+      if (a[i]+ a[j]+ j-i < smallest)
+         smallest= a[i]+ a[j]+ j-i;
+    }
+ }
+  cout<<smallest<<endl;
+}   
+
+    return 0;
+}
