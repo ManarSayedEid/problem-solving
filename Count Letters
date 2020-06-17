@@ -1,0 +1,23 @@
+Link: https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/J
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string str;
+    cin>>str;
+    int freq[125]={0};
+
+    for (int i=0; i<str.size(); i++){
+      freq[str[i]]++;
+    }
+
+
+    for (int J=97; J<125; J++){
+      if (freq[J] != 0)
+        cout<<(char)J<<" : "<< freq[J]<<endl;
+    }
+
+    return 0;
+}
