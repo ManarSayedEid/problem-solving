@@ -1,0 +1,35 @@
+Link: https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/D
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+string prime(int x){
+  
+if (x==2)
+    return "YES";
+
+if (x == 1 || x%2 == 0)
+     return "NO";
+
+    for (int i=3; i<=sqrt(x); i+=2){
+        if (x % i == 0 )
+           return "NO";
+      }
+    return "YES" ;
+}
+
+int main()
+{
+    int t,num;
+    cin>>t;
+
+    while (t--){
+       cin>>num;
+       cout<<prime(num)<<endl;
+    }
+    
+    
+    return 0;
+}
