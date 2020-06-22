@@ -1,0 +1,33 @@
+Link: https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/G
+
+#include <iostream>
+using namespace std;
+
+void mn_mx(int n){
+   int arr[n],mn,mx;
+   bool first_time=true;
+   
+   for (int i=0; i<n; i++){
+      cin>>arr[i];
+      
+      if (first_time || mn>arr[i])
+         mn=arr[i];
+         
+      if (first_time || mx<arr[i])
+         mx=arr[i];
+         
+    first_time=false;
+   }
+   
+   cout<<mn<<" "<<mx;
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    mn_mx(n);
+    
+    return 0;
+}
