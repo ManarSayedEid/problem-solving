@@ -1,0 +1,15 @@
+Link: https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/B
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    getline(cin, s,'\\');
+    
+    cout<<s;
+    
+    return 0;
+}
