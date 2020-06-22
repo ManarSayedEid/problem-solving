@@ -1,0 +1,22 @@
+Link: https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/E
+
+#include <iostream>
+using namespace std;
+
+void swap(){
+    int x,y;
+    cin>>x>>y;
+    
+    int temp=x;
+    x=y;
+    y=temp;
+    
+    cout<< x<< " " <<y;
+}
+
+int main()
+{
+    swap();
+
+    return 0;
+}
