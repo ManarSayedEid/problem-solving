@@ -1,0 +1,27 @@
+Link: http://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/M
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    
+    string str;
+    cin>>str;
+
+    string pattern="hello";
+    int indx=0;
+
+    for (int i=0; i<str.size(); i++){
+        if (pattern[indx] == str[i])
+            indx++;
+    }
+
+    if (indx==5)
+        cout<<"YES";
+    else
+        cout<<"NO";
+
+
+    return 0;
+}
