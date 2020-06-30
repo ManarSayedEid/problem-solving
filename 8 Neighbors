@@ -1,0 +1,39 @@
+Link: https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/X
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n,m,x,y;
+    cin>>n>>m;
+    char arr[n][m];
+    
+    for (int row=0; row<n; row++){
+        for (int col=0; col<m; col++){
+            cin>>arr[row][col];
+        }
+    }
+
+    cin>>x>>y;
+    x--;
+    y--;
+    bool is_right=true;
+    for (int row=x-1; row<= x+1; row++){
+        for (int col=y-1; col<= y+1; col++){
+            if (row == x && col == y)
+               continue;
+            
+            if (arr[row][col] != 'x')
+            is_right=false;
+        }
+    }
+    
+    if (is_right)
+      cout<<"yes";
+    else
+      cout<<"no";
+
+
+    return 0;
+}
