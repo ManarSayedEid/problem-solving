@@ -1,0 +1,23 @@
+Link: https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/N
+
+#include <iostream>
+using namespace std;
+
+int main(){
+        int n;
+    string str;
+    cin>>n>>str;
+
+    char prev = '-';
+    int cnt=0;
+
+    for (int i=0; i<n; i++){
+        if (prev !=str[i]){
+            prev = str[i];
+            cnt++;
+        }
+    }
+    cout<<cnt;
+
+return 0;
+}
