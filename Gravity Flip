@@ -1,0 +1,36 @@
+Link: http://codeforces.com/contest/405/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+
+for (int i=0; i<n; i++){
+    cin>>arr[i];
+}
+
+for (int i=0; i<n; i++){
+    int mn=arr[i];
+    for (int j=i+1; j<n; j++){
+        if (mn>arr[j]){
+            mn=arr[j];
+
+            int tmp=arr[i];
+            arr[i]=mn;
+            arr[j]=tmp;
+        }
+    }
+}
+for (int i=0; i<n; i++)
+    cout<<arr[i]<<" ";
+    
+    
+      
+    
+  return 0;
+}
