@@ -1,0 +1,36 @@
+Link: http://codeforces.com/contest/709/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+ int n,b,d;
+cin>>n>>b>>d;
+int arr[n];
+
+for (int i=0; i<n; i++)
+    cin>>arr[i];
+
+
+long long int max_size=0;
+int n_wastes=0;
+
+for (int i=0; i<n; i++){
+    if (arr[i] <= b)
+        max_size += arr[i];
+
+    if (max_size > d){
+        n_wastes++;
+        max_size = 0;
+        //flag=false;
+    }
+}
+cout<< n_wastes;
+    
+    
+      
+    
+  return 0;
+}
