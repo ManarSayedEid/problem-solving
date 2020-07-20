@@ -1,0 +1,24 @@
+Link: http://codeforces.com/contest/677/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int n_friends,h,width=0;
+   cin>>n_friends>>h;
+   int arr_height[n_friends];
+
+for (int i=0; i<n_friends; i++){
+   cin>>arr_height[i];
+
+   if (arr_height[i]>h)
+    width +=2;
+   else
+    width +=1;
+}
+cout<<width;
+
+return 0;
+}
