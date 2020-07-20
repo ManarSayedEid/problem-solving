@@ -1,0 +1,40 @@
+Link: http://codeforces.com/contest/236/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+string str;
+cin>>str;
+int sz= str.size();
+
+for (int i=0; i<sz; i++){
+    int mn=str[i];
+    for (int j=i+1; j<sz; j++){
+        if (mn > str[j]){
+            mn=str[j];
+            int temp=str[i];
+            str[i]=mn;
+            str[j]=temp;
+        }
+    }
+}
+
+int cnt=0;
+for (int i=0; i<sz-1; i++){
+    if (str[i]== str[i+1])
+        cnt++;
+}
+
+if ( (sz-cnt)%2 == 1)
+    cout<<"IGNORE HIM!";
+else
+    cout<<"CHAT WITH HER!";
+    
+    
+      
+    
+  return 0;
+}
