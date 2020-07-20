@@ -1,0 +1,41 @@
+Link: http://codeforces.com/contest/732/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int k,r;
+cin>>k>>r;
+bool not_enough = true;
+
+if (k%10 == 0 || k%10 == r){
+    cout<<1;
+    not_enough=false;
+}
+int _10_burles= k-(k%10);
+int r_burles= k%10;
+
+int x=0,y=0,cnt=0;
+
+if (not_enough){
+  while (true){
+    cnt++;
+    x += _10_burles;
+    y += r_burles;
+  //  cout<<x<<" "<<y<<endl;
+
+    if ( (x+y)%10 == 0)
+        break;
+
+    if (y%10==r)
+        break;
+
+  }
+  cout<<cnt;
+}
+    
+       
+  return 0;
+}
