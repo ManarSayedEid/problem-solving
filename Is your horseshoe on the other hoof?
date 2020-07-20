@@ -1,0 +1,36 @@
+Link: http://codeforces.com/contest/228/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int s1,s2,s3,s4;
+cin>>s1>>s2>>s3>>s4;
+
+int arr[5]= {s1,s2,s3,s4};
+
+//sort the array
+
+for (int i=0; i<3; i++){
+    int mn= i;
+    for (int j=i+1; j<4; j++){
+        if (arr[mn] > arr[j])
+            mn= j;
+    }
+    swap(arr[i],arr[mn]);
+}
+int cnt=0;
+
+for (int i=0; i<3; i++){
+    if (arr[i]==arr[i+1])
+        cnt++;
+}
+cout<<cnt;
+    
+    
+      
+    
+  return 0;
+}
