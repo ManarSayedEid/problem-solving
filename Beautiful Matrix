@@ -1,0 +1,35 @@
+Link: http://codeforces.com/contest/263/problem/A
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+int arr[5][5];
+int i,j;
+for (int row=0; row<5; row++){
+    for (int col=0; col<5; col++){
+        cin>> arr[row][col];
+
+        if (arr[row][col] == 1)
+            i= row, j=col;
+    }
+}
+
+if ( (i==0 || i==4) && ( j==0 || j==4) )
+    cout<<4;
+else if (i==2 && j==2)
+    cout<<0;
+else if ((i==2 && j!=2) || (j==2 && i!=2))
+    cout<<abs(j-i);
+else if ( (i==1 || i==3) && ( j==1 || j==3) )
+    cout<<2;
+else
+    cout<<3;
+    
+      
+    
+  return 0;
+}
