@@ -1,0 +1,33 @@
+Link: http://codeforces.com/contest/443/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string str;
+getline(cin, str);
+
+int cnt=0;
+if (str.size() < 3)
+    cout<<0;
+else
+{
+    int freq[125]={0};
+    for (int i=1; i<str.size(); i+=3)
+        freq[str[i]]++;
+
+
+    for (int i=97; i<123; i++)
+      if (freq[i] > 0)
+        cnt++;
+
+   cout<<cnt;
+}
+    
+    
+      
+    
+  return 0;
+}
