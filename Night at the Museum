@@ -1,0 +1,31 @@
+Link: http://codeforces.com/contest/731/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string str;
+cin>>str;
+char prev_char='a';
+int steps=0;
+
+for (int i=0; i<str.size(); i++){
+    int sub = abs(str[i]-prev_char);
+
+    if (sub <= 12)
+        steps += sub;
+    else
+        steps += (26-sub);
+
+    prev_char=str[i];
+}
+
+cout<<steps;
+    
+    
+      
+    
+  return 0;
+}
