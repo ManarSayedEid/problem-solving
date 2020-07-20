@@ -1,0 +1,30 @@
+Link: http://codeforces.com/contest/431/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a1,a2,a3,a4,sum=0;
+cin>>a1>>a2>>a3>>a4;
+
+string str;
+cin>>str;
+
+for (int i=0; i<str.size(); i++){
+    int digit = str[i]-'0';
+
+    if (digit == 1)
+        sum +=a1;
+    else if (digit == 2)
+        sum +=a2;
+    else if (digit == 3)
+        sum +=a3;
+    else
+        sum += a4;
+}
+cout<<sum;
+  
+  return 0;
+}
