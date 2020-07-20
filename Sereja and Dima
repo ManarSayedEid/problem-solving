@@ -1,0 +1,43 @@
+Link: http://codeforces.com/contest/381/problem/A
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int card;
+cin>>card;
+int arr[card];
+
+for (int i=0; i<card; i++)
+    cin>>arr[i];
+
+int indx1=0, indx2=card-1, mx;
+int sum_seraji=0, sum_dima=0;
+
+for (int steps=1; steps<=card; steps++){
+    if (arr[indx1] == 0)
+        indx1++;
+    if (arr[indx2] == 0)
+        indx2--;
+
+    if (arr[indx1] > arr[indx2])
+        mx=indx1;
+    else
+        mx=indx2;
+
+    if (steps % 2 == 1)
+        sum_seraji += arr[mx];
+    else
+        sum_dima += arr[mx];
+
+    arr[mx] = 0;
+}
+
+cout<<sum_seraji<<" "<<sum_dima;
+    
+    
+      
+    
+  return 0;
+}
