@@ -1,0 +1,37 @@
+Link: http://codeforces.com/contest/686/problem/A
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    
+long long int n, icecreams, sad_child=0;
+cin>>n>>icecreams;
+n++;
+while (n--){
+    string s;
+    getline(cin, s);
+
+    int integer=0;
+    long long int pw= pow (10, s.size()-2-1);
+
+    for (int i=2; i<s.size(); i++){
+        integer += (s[i]-'0') * pw;
+        pw /=10;
+    }
+
+    if (s[0] == '+')
+        icecreams += integer;
+    else{
+        if (integer <= icecreams)
+            icecreams -= integer;
+        else
+            sad_child++;
+    }
+}
+cout<<icecreams<<" "<<sad_child;
+   
+  return 0;
+}
