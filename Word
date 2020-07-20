@@ -1,0 +1,33 @@
+Link: http://codeforces.com/contest/59/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   
+string str;
+cin>>str;
+int sum_lower=0, sum_upper=0;
+
+for (int i=0; i<str.size(); i++){
+    if (islower(str[i]))
+        sum_lower++;
+    else
+        sum_upper++;
+}
+
+if (sum_upper > sum_lower){
+    for (int i=0; i<str.size(); i++)
+        cout<<(char)toupper(str[i]);
+}
+else{
+    for (int i=0; i<str.size(); i++)
+        cout<<(char)tolower(str[i]);
+} 
+    
+      
+    
+  return 0;
+}
