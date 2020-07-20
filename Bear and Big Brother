@@ -1,0 +1,26 @@
+Link: http://codeforces.com/contest/791/problem/A
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,years;
+    cin>>a>>b;
+
+
+for (int year=1; ; year++){
+    a *=3;
+    b *=2;
+
+    if (a > b){
+        years = year;
+        break;
+    }
+}
+cout<<years;
+      
+    
+  return 0;
+}
